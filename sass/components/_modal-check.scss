@@ -1,0 +1,38 @@
+.check-text {
+    font-size: 14px;
+    line-height: 1.7142;
+    letter-spacing: 0.03em;
+    color: #757575;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    &::before {
+            content: '';
+            width: 16px;
+            height: 15px;
+            border: 2px solid #212121;
+            border-radius: 2px;
+            margin-right: 10px;
+            transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+                border 250ms cubic-bezier(0.4, 0, 0.2, 1);
+        }
+}
+
+.link-contract {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 1.7142;
+    letter-spacing: 0.03em;
+    text-decoration-line: underline;
+    color: #2196F3;
+    display: block;
+    margin-left: 5px;
+}
+
+.modal-check:checked+.check-text::before {
+    background-color: #2196F3;
+    border: 2px solid #2196F3;
+    background-image: url(../images/check.svg);
+    background-position: center;
+    background-repeat: no-repeat;
+}
